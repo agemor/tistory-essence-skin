@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="Keywords" content="[##_meta_http_equiv_keywords_##]" />
+
+  <title>[##_title_##]
+    <s_page_title> - [##_page_post_title_##]</s_page_title>
+  </title>
+
+  <link rel="shortcut icon" href="[##_blog_link_##]favicon.ico" />
+  <link rel="alternate" type="application/rss+xml" title="[##_title_##]" href="[##_rss_url_##]" />
+  <link rel="alternate" type="application/rss+xml" title="[##_title_##] : comments" href="[##_comment_rss_url_##]" />
+  <link rel="alternate" type="application/rss+xml" title="[##_title_##] : trackbacks" href="[##_trackback_rss_url_##]" />
+  <link rel="alternate" type="application/rss+xml" title="[##_title_##] : comments + trackbacks" href="[##_response_rss_url_##]"
+  />
+
+  <!-- CSS -->
+  <link rel="stylesheet" media="screen" type="text/css" href="./style.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+  <!-- 제목 바-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+
+
+      <a class="navbar-brand" href="/">
+        <img src="[##_image_##]" width="30" height="30" class="d-inline-block align-top"> [##_title_##]</a>
+
+      <!-- collapse 토글 바 -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="[##_blog_link_##]">홈</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./notice">공지사항</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="[##_guestbook_link_##]">방명록</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              관리
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="[##_owner_url_##]/entry/post">글 쓰기</a>
+              <a class="dropdown-item" href="[##_owner_url_##]">관리 페이지</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+
+
+    <div class="row">
+
+      <div class="col-xl-9 col-lg-8 col-sm-12">
+
+
+
+        <s_article_rep>
+
+          <s_index_article_rep>
+            <div class="mb-5">
+              <h5 class="mt-0">
+                <a class="link-unstyled" href="[##_article_rep_link_##]">[##_article_rep_title_##]</a>
+              </h5>
+              <div class="clearfix">
+                <a class="float-left" href="[##_article_rep_category_link_##]">[##_article_rep_category_##]</a>
+                <p class="float-right text-muted">[##_article_rep_date_##]</p>
+              </div>
+              <div class="clearfix">
+                <s_article_rep_thumbnail>
+                  <a href="[##_article_rep_link_##]">
+                    <img class="mr-3 img-thumbnail img-responsive rounded float-left" style="width: 120px" src="//i1.daumcdn.net/thumb/C148x148/?fname=[##_article_rep_thumbnail_raw_url_##]">
+                    <!--<img class="mr-3 img-thumbnail img-responsive rounded float-left" style="width: 120px" src="http://i1.daumcdn.net/thumb/C148x148/?fname=http://cfile7.uf.tistory.com/image/994CF2335A1A78EC1308B7">-->
+                  </a>
+                </s_article_rep_thumbnail>
+                <p>[##_article_rep_summary_##] (
+                  <a href="[##_article_rep_category_link_##]">더 읽기...</a>)</p>
+
+              </div>
+            </div>
+
+          </s_index_article_rep>
+
+
+        </s_article_rep>
+
+
+
+
+
+
+      </div>
+
+      <div class="col-xl-3 col-lg-4 col-sm-12">
+
+        <s_search>
+          <form action="#" method="get" class="frm_search" onsubmit="[##_search_onclick_submit_##]">
+            <div class="input-group">
+              <input type="text" name="[##_search_name_##]" value="[##_search_text_##]" class="form-control" placeholder="Keyword">
+              <span class="input-group-btn">
+                <button type="submit" class="btn btn-secondary" type="button">검색</button>
+              </span>
+            </div>
+          </form>
+        </s_search>
+
+
+        [##_category_list_##]
+
+        <div class="list-group mt-3">
+        </div>
+
+
+        <!--
+                  <ul class="tt_category">
+                    <li class="">
+                      <a class="link_tit" href="/category">
+                        분류 전체보기
+                        <span class="c_cnt">(3)</span>
+                      </a>
+                      <ul class="category_list">
+                        <li class="">
+                          <a class="link_item" href="/category/%EB%9E%9C%EB%8D%A4%20%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81">
+                            랜덤 엔지니어링
+                            <span class="c_cnt">(1)</span>
+                          </a>
+                        </li>
+                        <li class="">
+                          <a class="link_item" href="/category/%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4">
+                            아이디어
+                            <span class="c_cnt">(0)</span>
+                          </a>
+                        </li>
+                        <li class="">
+                          <a class="link_item" href="/category/%EC%B1%85%EC%9D%BD%EA%B8%B0">
+                            책읽기
+                            <span class="c_cnt">(0)</span>
+                          </a>
+                        </li>
+                        <li class="">
+                          <a class="link_item" href="/category/%EB%B0%9C%EA%B2%AC">
+                            발견
+                            <span class="c_cnt">(0)</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                -->
+
+
+
+      </div>
+    </div>
+
+
+
+  </div>
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+    crossorigin="anonymous"></script>
+  <script>
+
+    var categories = [];
+
+    // 전체 글 갯수 구하기
+    var totalNumberOfPosts = $("a.link_tit > span").text().match(/\(([^)]+)\)/)[1];
+    categories.push(["전체 글 보기", "/category", totalNumberOfPosts]);
+
+    // 카테고리 구하기
+    $("ul.category_list > li > a").each(function (index) {
+      var category = $.trim($(this).contents().filter(function () { return this.nodeType == 3; })[0].nodeValue);
+      var href = $(this).attr('href');
+      var numberOfPosts = $(this).find("span").text().match(/\(([^)]+)\)/)[1];
+
+      categories.push([category, href, numberOfPosts]);
+    });
+
+    // 카테고리 메뉴 생성
+    var listGroup = $('.list-group');
+    $.each(categories, function (i) {
+
+      var li = $('<a/>')
+        .attr('class', 'list-group-item list-group-item-action d-flex justify-content-between align-items-center')
+        .attr('href', categories[i][1])
+        .text(categories[i][0])
+        .appendTo(listGroup);
+
+      var span = $("<span/>")
+        .attr('class', "badge badge-primary badge-pill")
+        .text(categories[i][2])
+        .appendTo(li);
+
+    });
+
+    // 기존의 메뉴 교체
+    $(".tt_category").remove();
+
+  </script>
+</body>
+
+</html>
