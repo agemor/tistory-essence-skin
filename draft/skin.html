@@ -22,7 +22,24 @@
   <!-- CSS -->
   <link rel="stylesheet" media="screen" type="text/css" href="./style.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        appId: '213087339233922',
+        xfbml: true,
+        version: 'v2.11'
+      });
+      FB.AppEvents.logPageView();
+    };
 
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) { return; }
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
 </head>
 
 <body>
@@ -69,13 +86,8 @@
   </nav>
 
   <div class="container mt-4">
-
-
     <div class="row">
-
       <div class="col-xl-9 col-lg-8 col-sm-12">
-
-
 
         <s_article_rep>
 
@@ -97,83 +109,95 @@
                 </s_article_rep_thumbnail>
                 <p>[##_article_rep_summary_##] (
                   <a href="[##_article_rep_category_link_##]">더 읽기...</a>)</p>
-
               </div>
             </div>
-
           </s_index_article_rep>
 
 
-        </s_article_rep>
 
 
 
 
 
 
-      </div>
 
-      <div class="col-xl-3 col-lg-4 col-sm-12">
 
-        <s_search>
-          <form action="#" method="get" class="frm_search" onsubmit="[##_search_onclick_submit_##]">
-            <div class="input-group">
-              <input type="text" name="[##_search_name_##]" value="[##_search_text_##]" class="form-control" placeholder="Keyword">
-              <span class="input-group-btn">
-                <button type="submit" class="btn btn-secondary" type="button">검색</button>
-              </span>
+          <s_permalink_article_rep>
+
+
+            <h3 class="mt-0">
+              <a class="link-unstyled" href="[##_article_rep_link_##]">[##_article_rep_title_##]</a>
+            </h3>
+            <div class="clearfix">
+              <a class="float-left" href="[##_article_rep_category_link_##]">[##_article_rep_category_##]</a>
+              <p class="float-right text-muted">[##_article_rep_date_##]</p>
             </div>
-          </form>
-        </s_search>
+
+            <s_ad_div>
+              <div class="clearfix">
+                <div class="btn-group float-right" role="group" aria-label="Basic example">
+                  <a href="[##_s_ad_m_link_##]" class="btn btn-sm btn-light">수정</a>
+                  <a href="#" onclick="[##_s_ad_s2_onclick_##]" class="btn btn-sm btn-light">발행</a>
+                  <a href="#" onclick="[##_s_ad_d_onclick_##]" class="btn btn-sm btn-light">삭제</a>
+                </div>
+              </div>
+            </s_ad_div>
+
+            <div class="mt-3">
+              [##_article_rep_desc_##]
+            </div>
 
 
-        [##_category_list_##]
+            <s_tag_label>
+              <div class="tag-container mt-3">
+                [##_tag_label_rep_##]
+              </div>
 
-        <div class="list-group mt-3">
-        </div>
-
-
-        <!--
-                  <ul class="tt_category">
-                    <li class="">
-                      <a class="link_tit" href="/category">
-                        분류 전체보기
-                        <span class="c_cnt">(3)</span>
-                      </a>
-                      <ul class="category_list">
-                        <li class="">
-                          <a class="link_item" href="/category/%EB%9E%9C%EB%8D%A4%20%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81">
-                            랜덤 엔지니어링
-                            <span class="c_cnt">(1)</span>
-                          </a>
-                        </li>
-                        <li class="">
-                          <a class="link_item" href="/category/%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4">
-                            아이디어
-                            <span class="c_cnt">(0)</span>
-                          </a>
-                        </li>
-                        <li class="">
-                          <a class="link_item" href="/category/%EC%B1%85%EC%9D%BD%EA%B8%B0">
-                            책읽기
-                            <span class="c_cnt">(0)</span>
-                          </a>
-                        </li>
-                        <li class="">
-                          <a class="link_item" href="/category/%EB%B0%9C%EA%B2%AC">
-                            발견
-                            <span class="c_cnt">(0)</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                -->
+            </s_tag_label>
 
 
 
-      </div>
+      <div class="fb-comments" data-href="http://hyunjun.org/[##_article_rep_link_##]" data-width="100%" data-numposts="5"></div>
+
+
+      </s_permalink_article_rep>
+
+
+
+
+
+
+      </s_article_rep>
+
+
+
+
+
+
     </div>
+
+    <div class="col-xl-3 col-lg-4 col-sm-12">
+
+      <s_search>
+        <form action="#" method="get" class="frm_search" onsubmit="[##_search_onclick_submit_##]">
+          <div class="input-group">
+            <input type="text" name="[##_search_name_##]" value="[##_search_text_##]" class="form-control" placeholder="Keyword">
+            <span class="input-group-btn">
+              <button type="submit" class="btn btn-secondary" type="button">검색</button>
+            </span>
+          </div>
+        </form>
+      </s_search>
+
+      [##_category_list_##]
+
+      <div class="list-group mt-3">
+      </div>
+
+    </div>
+
+
+  </div>
 
 
 
@@ -225,6 +249,28 @@
 
     // 기존의 메뉴 교체
     $(".tt_category").remove();
+
+    // 태그
+    if ($("div.tag-container > a") != null) {
+      var tags = [];
+      $("div.tag-container > a").each(function (index) {
+
+        var tag = $.trim($(this).text());
+        var href = $(this).attr('href');
+        tags.push([tag, href]);
+      });
+
+      var listGroup = $("div.tag-container").empty();
+      $.each(tags, function (i) {
+        var a = $('<a/> ')
+          .attr('class', 'badge badge-primary mr-1')
+          .attr('href', tags[i][1])
+          .text(tags[i][0])
+          .appendTo(listGroup);
+      });
+
+
+    }
 
   </script>
 </body>
