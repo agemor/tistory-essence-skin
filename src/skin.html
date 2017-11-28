@@ -1,218 +1,317 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
 
-    <title>[##_page_title_##]</title>
-    <link rel="alternate" type="application/rss+xml" title="[##_title_##]" href="[##_rss_url_##]" />
-    <link rel="stylesheet" href="./style.css">
-  </head>
-  <body id="[##_body_id_##]">
-<s_t3>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="Keywords" content="[##_meta_http_equiv_keywords_##]" />
 
+  <title>[##_title_##]</title>
 
-    <div class="container">
-      <h3>현준 노트</h3>
-      <div class="row">
-        <div class="one-half column">
-          <a href="#">랜덤 엔지니어링</a> | <a href="#">책읽기</a> | <a href="#">아이디어</a> | <a href="#">발견</a> | <a href="#">RSS</a>
-        </div>
-        <div class="one-half column">
-          <div class="u-pull-right">
-            <form action="#" method="get" onsubmit="[##_search_onclick_submit_##]">
-              <input type="text"  name="[##_search_name_##]" value="[##_search_text_##]"  placeholder="검색어 입력">
-              <input type="submit" value="찾기">
-            </form>
-          </div>
-        </div>
-        <hr/>
-        
+  <link rel="shortcut icon" href="[##_blog_link_##]favicon.ico" />
+  <link rel="alternate" type="application/rss+xml" title="[##_title_##]" href="[##_rss_url_##]" />
+  <link rel="alternate" type="application/rss+xml" title="[##_title_##] : comments" href="[##_comment_rss_url_##]" />
+  <link rel="alternate" type="application/rss+xml" title="[##_title_##] : trackbacks" href="[##_trackback_rss_url_##]" />
+  <link rel="alternate" type="application/rss+xml" title="[##_title_##] : comments + trackbacks" href="[##_response_rss_url_##]"
+  />
 
+  <!-- CSS -->
+  <link rel="stylesheet" media="screen" type="text/css" href="./style.css" />
+  <link rel="stylesheet" media="screen" type="text/css" href="./images/theme.css" />
 
+  <!--[if lt IE 9]>
+	<script src="//t1.daumcdn.net/tistory_admin/lib/jquery/jquery-1.12.4.min.js"></script>
+	<![endif]-->
+  <!--[if gte IE 9]><!-->
+  <script src="//t1.daumcdn.net/tistory_admin/lib/jquery/jquery-3.2.1.min.js"></script>
+  <!--<![endif]-->
 
+</head>
+
+<body>
+
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        appId: '213087339233922',
+        xfbml: true,
+        version: 'v2.11'
+      });
+      FB.AppEvents.logPageView();
+    };
+
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) { return; }
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+  <div class="container my-5 d-none d-sm-block">
+    <h2>
+      <a class="link-unstyled" href="[##_blog_link_##]">[##_title_##]</a>
+    </h2>
+  </div>
+
+  <!-- 제목 바-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container clearfix">
+
+      <!-- collapse 토글 바 -->
+      <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="[##_blog_link_##]">Main</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/notice">Notice</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              Administrator
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="[##_owner_url_##]/entry/post">Write an article</a>
+              <a class="dropdown-item" href="[##_owner_url_##]">Manage site</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+    <div class="row">
+      <div class="article-base col-xl-9 col-lg-8 col-sm-12">
+        <s_notice_rep>
+          <s_index_article_rep>
+            <div class="article-card card mb-3 p-3">
+              <h5 class="mt-0">
+                <a class="link-unstyled" href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a>
+              </h5>
+              <div class="clearfix">
+                <a class="float-left" href="/notice">Notice</a>
+                <p class="float-right text-muted">[##_notice_rep_date_##]</p>
+              </div>
+              <div class="clearfix">
+                <p class="my-0">[##_notice_rep_summary_##]
+                  <a href="[##_notice_rep_link_##]">Read more</a>
+                </p>
+              </div>
+            </div>
+          </s_index_article_rep>
+
+          <s_permalink_article_rep>
+            <div class="article-content card p-4">
+              <h3 class="mt-0">
+                <a class="link-unstyled" href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a>
+              </h3>
+              <div class="clearfix">
+                <a class="float-left" href="/notice">Notice</a>
+                <p class="float-right text-muted">[##_notice_rep_date_##]</p>
+              </div>
+              <div class="mt-3">
+                [##_notice_rep_desc_##]
+              </div>
+              <div class="row">
+                <div class="col-8">
+                  <s_tag_label>
+                    <div class="tag-container">
+                      [##_tag_label_rep_##]
+                    </div>
+                  </s_tag_label>
+                </div>
+                <div class="col-4 text-right">
+                  <a id="reportAbuse">Report abuse</a>
+                </div>
+              </div>
+              <div class="fb-comments my-3" data-href="http://hyunjun.org/[##_notice_rep_link_##]" data-width="100%" data-numposts="5"></div>
+            </div>
+          </s_permalink_article_rep>
+        </s_notice_rep>
 
         <s_article_rep>
-					<div id="mArticle" class="article_skin">
+          <s_index_article_rep>
+            <div class="article-card card mb-3 p-3">
+              <h5 class="mt-0">
+                <a class="link-unstyled" href="[##_article_rep_link_##]">[##_article_rep_title_##]</a>
+              </h5>
+              <div class="clearfix">
+                <a class="float-left" href="[##_article_rep_category_link_##]">[##_article_rep_category_##]</a>
+                <p class="float-right text-muted">[##_article_rep_date_##]</p>
+              </div>
+              <div class="clearfix">
+                <s_article_rep_thumbnail>
+                  <a href="[##_article_rep_link_##]">
+                    <img class="mr-3 mt-1 img-responsive float-left" style="width: 148px; height: 120px" src="//i1.daumcdn.net/thumb/C148x148/?fname=[##_article_rep_thumbnail_raw_url_##]">
+                  </a>
+                </s_article_rep_thumbnail>
+                <p class="my-0">[##_article_rep_summary_##]
+                  <a href="[##_article_rep_link_##]">Read more</a>
+                </p>
+              </div>
+            </div>
+          </s_index_article_rep>
+          <s_permalink_article_rep>
+            <div class="article-content card p-4">
+              <h3 class="mt-0">
+                <a class="link-unstyled" href="[##_article_rep_link_##]">[##_article_rep_title_##]</a>
+              </h3>
+              <div class="clearfix">
+                <a class="float-left" href="[##_article_rep_category_link_##]">[##_article_rep_category_##]</a>
+                <p class="float-right text-muted">[##_article_rep_date_##]</p>
+              </div>
+              <s_ad_div>
+                <div class="clearfix">
+                  <div class="btn-group float-right" role="group" aria-label="Basic example">
+                    <a href="[##_s_ad_m_link_##]" class="btn btn-sm btn-light">Edit</a>
+                    <a href="#" onclick="[##_s_ad_s2_onclick_##]" class="btn btn-sm btn-light">Publish</a>
+                    <a href="#" onclick="[##_s_ad_d_onclick_##]" class="btn btn-sm btn-light">Delete</a>
+                  </div>
+                </div>
+              </s_ad_div>
+              <div class="mt-4">
+                [##_article_rep_desc_##]
+              </div>
+              <div class="row">
+                <div class="col-8">
+                  <s_tag_label>
+                    <div class="tag-container">
+                      [##_tag_label_rep_##]
+                    </div>
+                  </s_tag_label>
+                </div>
+                <div class="col-4 text-right">
+                  <a id="reportAbuse">Report abuse</a>
+                </div>
+              </div>
+              <div class="fb-comments mt-4" data-href="http://hyunjun.org/[##_article_rep_link_##]" data-width="100%" data-numposts="5"></div>
+            </div>
+          </s_permalink_article_rep>
+        </s_article_rep>
 
-						<s_index_article_rep>
-							<div class="list_content">
-								<s_article_rep_thumbnail>
-									<a href="[##_article_rep_link_##]" class="thumbnail_post"><img src="//i1.daumcdn.net/thumb/C148x148/?fname=[##_article_rep_thumbnail_raw_url_##]"></a>
-								</s_article_rep_thumbnail>
-								<a href="[##_article_rep_link_##]" class="link_post">
-									<strong class="tit_post">[##_article_rep_title_##]</strong>
-									<p class="txt_post">[##_article_rep_summary_##]</p>
-								</a>
-								<div class="detail_info">
-									<a href="[##_article_rep_category_link_##]" class="link_cate">[##_article_rep_category_##]</a>
-									<span class="txt_bar"></span>
-									[##_article_rep_date_##]
-								</div>
-							</div>
-						</s_index_article_rep>
-
-						<s_permalink_article_rep>
-							<div class="skin_view">
-								<h2 id="dkBody" class="screen_out">티스토리 뷰</h2>
-								<div class="area_title">
-									<strong class="tit_category"><a href="[##_article_rep_category_link_##]">[##_article_rep_category_##]</a></strong>
-									<h3 class="tit_post"><a href="[##_article_rep_link_##]">[##_article_rep_title_##]</a></h3>
-									<span class="txt_detail my_post">[##_article_rep_author_##]
-										<span class="txt_bar"></span>[##_article_rep_date_##]
-										<s_ad_div>
-											<span class="my_edit">
-												<span class="txt_bar"></span><a href="[##_s_ad_m_link_##]" class="link_detail">수정</a>
-												<span class="txt_bar"></span><a href="#" onclick="[##_s_ad_s2_onclick_##]" class="link_detail">[##_s_ad_s1_label_##]</a>
-												<span class="txt_bar"></span><a href="#" onclick="[##_s_ad_d_onclick_##]" class="link_detail">삭제</a>
-											</span>
-										</s_ad_div>
-									</span>
-								</div>
-								<div class="area_view">
-									[##_article_rep_desc_##]
-								</div>
-								<div class="area_etc">
-									<strong class="screen_out">공유하기 링크</strong>
-									<ul class="list_share">
-										<li><a href="#none" class="ico_skin link_fb" data-service="facebook">페이스북</a></li>
-										<li><a href="#none" class="ico_skin link_ks" data-service="kakaostory">카카오스토리</a></li>
-										<li><a href="#none" class="ico_skin link_tw" data-service="twitter">트위터</a></li>
-									</ul>
-
-									<s_tag_label>
-										<dl class="list_tag">
-											<dt class="tit_tag">TAG</dt>
-											<dd class="desc_tag">[##_tag_label_rep_##]</dd>
-										</dl>
-									</s_tag_label>
-								</div>
-
-
-								<div class="area_reply ">
-
-
-									<strong class="tit_reply">댓글
-										<button type="button" class="btn_reply" onclick="$.Area.Comment.changeStatus();[##_article_rep_rp_link_##]">
-											<s_rp_count>[##_article_rep_rp_cnt_##]</s_rp_count>
-											<span class="ico_skin ico_reply">댓글펼치기</span>
-										</button>
-									</strong>
-
-
-
-									<!-- 대체텍스트 댓글펼치기/댓글접기 변경 -->
-									<s_rp>
-										<button type="button" class="btn_replymore">이전 댓글 보기</button>
-										<s_rp_container>
-											<ul class="list_reply">
-												<s_rp_rep>
-													<li id='[##_rp_rep_id_##]' class="[##_rp_rep_class_##]">
-
-														<img src="//i1.daumcdn.net/thumb/C100x100/?fname=[##_rp_rep_logo_##]" width="50" height="50" class="img_profile" alt="프로필사진">
-
-														<span class="reply_content">
-															<span class="tit_nickname">[##_rp_rep_name_##] <span class="ico_skin ico_secret"></span></span>
-															<span class="txt_reply">[##_rp_rep_desc_##]</span>
-															<span class="txt_date">[##_rp_rep_date_##]</span>
-														</span>
-														<button type="button" class="btn_replymenu">
-															<span class="ico_skin ico_replymenu">댓글 메뉴</span>
-														</button>
-														<div class="my_edit">
-															<a href="[##_rp_rep_link_##]" class="link_edit">댓글주소</a>
-															<a href="#" onclick="[##_rp_rep_onclick_delete_##]" class="link_edit">수정/삭제</a>
-															<a href="#" onclick="[##_rp_rep_onclick_reply_##]" class="link_edit">댓글쓰기</a>
-														</div>
-													</li>
-
-													<s_rp2_container>
-														<s_rp2_rep>
-															<li id='[##_rp_rep_id_##]' class="re_reply [##_rp_rep_class_##]">
-
-																<img src="//i1.daumcdn.net/thumb/C100x100/?fname=[##_rp_rep_logo_##]" width="50" height="50" class="img_profile" alt="프로필사진">
-
-																<span class="reply_content">
-																	<span class="tit_nickname">[##_rp_rep_name_##] <span class="ico_skin ico_secret"></span></span>
-																	<span class="txt_reply">[##_rp_rep_desc_##]</span>
-																	<span class="txt_date">[##_rp_rep_date_##]</span>
-																</span>
-																<button type="button" class="btn_replymenu">
-																	<span class="ico_skin ico_replymenu">댓글 메뉴</span>
-																</button>
-																<div class="my_edit">
-																	<a href="[##_rp_rep_link_##]" class="link_edit">댓글주소</a>
-																	<a href="#" onclick="[##_rp_rep_onclick_delete_##]" class="link_edit">수정/삭제</a>
-																</div>
-															</li>
-														</s_rp2_rep>
-													</s_rp2_container>
-												</s_rp_rep>
-											</ul>
-										</s_rp_container>
-
-										<s_rp_input_form>
-											<fieldset class="fld_reply">
-												<legend class="screen_out">댓글쓰기 폼</legend>
-												<div class="reply_write ">
-													<label for="[##_rp_input_comment_##]" class="lab_write"></label>
-													<textarea id="[##_rp_input_comment_##]" name="[##_rp_input_comment_##]" class="tf_reply" placeholder="여러분의 소중한 댓글을 입력해주세요" tabindex="1"></textarea>
-												</div>
-												<div class="reply_writer">
-													<s_rp_member>
-														<s_rp_guest>
-															<div class="writer_info">
-																<span class="info_name ">
-																	<span class="wrap_info">
-																		<input type="text" name="[##_rp_input_name_##]" id="[##_rp_input_name_##]" class="inp_info" placeholder="이름" value="[##_guest_name_##]" tabindex="2">
-																	</span>
-																</span>
-																<span class="info_pw ">
-																	<span class="wrap_info">
-																		<input type="password" name="[##_rp_input_password_##]" id="[##_rp_input_password_##]" class="inp_info" placeholder="비밀번호" tabindex="3">
-																	</span>
-																</span>
-															</div>
-														</s_rp_guest>
-														<div class="writer_check">
-															<span class="check_secret ">
-																<input type="checkbox" name="[##_rp_input_is_secret_##]" id="[##_rp_input_is_secret_##]" class="inp_secret" tabindex="4">
-																<label for="[##_rp_input_is_secret_##]" class="lab_secret">
-																	<span class="ico_skin ico_check"></span>비밀글
-																</label>
-															</span>
-
-														</div>
-
-													</s_rp_member>
-
-													<div class="writer_btn">
-														<button type="submit" class="btn_enter" onclick="[##_rp_onclick_submit_##]" tabindex="5">입력</button>
-													</div>
-												</div>
-											</fieldset>
-										</s_rp_input_form>
-
-									</s_rp>
-								</div>
-							</div>
-						</s_permalink_article_rep>
-					</div>
-				</s_article_rep>
-
-
-
-
-
-
-
-
-
+        <s_paging>
+          <nav class="mt-3">
+            <ul class="pagination justify-content-center">
+              <li class="page-item [##_no_more_prev_##]">
+                <a class="page-link" [##_prev_page_##] tabindex="-1">Previous</a>
+              </li>
+              <s_paging_rep>
+                <li class="page-item">
+                  <a class="page-link" [##_paging_rep_link_##]>[##_paging_rep_link_num_##]</a>
+                </li>
+              </s_paging_rep>
+              <li class="page-item [##_no_more_next_##]">
+                <a class="page-link" [##_next_page_##]>Next</a>
+              </li>
+            </ul>
+          </nav>
+        </s_paging>
       </div>
 
-      
+      <div class="col-xl-3 col-lg-4 col-sm-12">
 
+        <s_search>
+          <form action="#" method="get" class="frm_search" onsubmit="[##_search_onclick_submit_##]">
+            <div class="input-group">
+              <input type="text" name="[##_search_name_##]" value="[##_search_text_##]" class="form-control" placeholder="Keyword">
+              <span class="input-group-btn">
+                <button type="submit" class="btn btn-secondary" type="button">Search</button>
+              </span>
+            </div>
+          </form>
+        </s_search>
+
+        [##_category_list_##]
+        <div class="card mt-3">
+          <div class="card-header">
+            Category
+          </div>
+          <div class="list-group  list-group-flush">
+          </div>
+        </div>
+
+        <s_sidebar>
+          <s_sidebar_element>
+            <s_rct_notice>
+              <div class="card mt-3">
+                <div class="card-header">
+                  Notice
+                </div>
+                <div class="card-body">
+                  <s_rct_notice_rep>
+                    <a href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a>
+                    <br/>
+                  </s_rct_notice_rep>
+                </div>
+              </div>
+            </s_rct_notice>
+          </s_sidebar_element>
+
+          <s_sidebar_element>
+            <div class="card mt-3">
+              <div class="card-header">
+                Recent articles
+              </div>
+              <div class="card-body">
+                <s_rctps_rep>
+                  <a href="[##_rctps_rep_link_##]">[##_rctps_rep_title_##]</a>
+                  <br/>
+                </s_rctps_rep>
+              </div>
+            </div>
+          </s_sidebar_element>
+
+          <s_sidebar_element>
+            <div class="card mt-3">
+              <div class="card-header">
+                Popular tags
+              </div>
+              <div class="card-body">
+                <s_random_tags>
+                  <a href="[##_tag_link_##]" class="badge badge-primary">[##_tag_name_##]</a>
+                </s_random_tags>
+              </div>
+            </div>
+          </s_sidebar_element>
+
+          <s_sidebar_element>
+            <div class="card mt-3">
+              <div class="card-header">
+                Visit logs
+              </div>
+              <div class="card-body">
+                Today: [##_count_today_##]&nbsp; Yesterday: [##_count_yesterday_##]&nbsp; Total: [##_count_total_##]&nbsp;
+              </div>
+            </div>
+          </s_sidebar_element>
+
+        </s_sidebar>
+      </div>
     </div>
-</s_t3>
+
+  </div>
+
+  <footer class="blog-footer mt-3 bg-light">
+    <div class="container">
+      <p>© 2018
+        <a href="mailto:hyunjun.leo.kim@gmail.com">HyunJun Kim</a> All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  <script src="./images/script.js"></script>
 </body>
+
 </html>
