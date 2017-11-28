@@ -10,11 +10,11 @@
 데모: [개발자 블로그](http://hyunjun.org)
 
 - 메인 페이지
-![preview](src/preview.png)
+![preview](src/preview.jpg)
 
 
 - 글 읽기 페이지
-![preview2](src/preview2.png)
+![preview2](src/preview2.jpg)
 
 
 ## 스킨 적용하기
