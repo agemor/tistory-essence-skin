@@ -134,7 +134,7 @@
                 <a class="link-unstyled" href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a>
               </h3>
               <div class="clearfix">
-                <a class="float-left" href="/notice">공지사항</a>
+                <a class="float-left" href="/notice">Notice</a>
                 <p class="float-right text-muted">[##_notice_rep_date_##]</p>
               </div>
 
@@ -407,7 +407,7 @@
 
     // 전체 글 갯수 구하기
     var totalNumberOfPosts = $("a.link_tit > span").text().match(/\(([^)]+)\)/)[1];
-    categories.push(["전체 글 보기", "/category", totalNumberOfPosts]);
+    categories.push(["All", "/category", totalNumberOfPosts]);
 
     // 카테고리 구하기
     $("ul.category_list > li > a").each(function (index) {
