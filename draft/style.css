@@ -1,4 +1,14 @@
-.link-unstyled, .link-unstyled:link, .link-unstyled:hover {
-    color: inherit;
-    text-decoration: inherit;
-  }
+.link-unstyled,
+.link-unstyled:link,
+.link-unstyled:hover {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+#tistorytoolbarid {
+  display: none;
+}
+
+.daum_like_wrapper {
+  display: none
+}

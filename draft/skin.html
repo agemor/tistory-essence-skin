@@ -8,9 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="Keywords" content="[##_meta_http_equiv_keywords_##]" />
 
-  <title>[##_title_##]
-    <s_page_title> - [##_page_post_title_##]</s_page_title>
-  </title>
+  <title>[##_title_##] - [##_page_post_title_##]</title>
 
   <link rel="shortcut icon" href="[##_blog_link_##]favicon.ico" />
   <link rel="alternate" type="application/rss+xml" title="[##_title_##]" href="[##_rss_url_##]" />
@@ -22,38 +20,44 @@
   <!-- CSS -->
   <link rel="stylesheet" media="screen" type="text/css" href="./style.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-  <script>
-    window.fbAsyncInit = function () {
-      FB.init({
-        appId: '213087339233922',
-        xfbml: true,
-        version: 'v2.11'
-      });
-      FB.AppEvents.logPageView();
-    };
-
-    (function (d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) { return; }
-      js = d.createElement(s); js.id = id;
-      js.src = "https://connect.facebook.net/en_US/sdk.js";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-  </script>
 </head>
 
 <body>
 
+    <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '213087339233922',
+            xfbml      : true,
+            version    : 'v2.11'
+          });
+          FB.AppEvents.logPageView();
+        };
+      
+        (function(d, s, id){
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement(s); js.id = id;
+           js.src = "https://connect.facebook.net/en_US/sdk.js";
+           fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
+      </script>
+
+    <div class="container my-5 d-none d-sm-block">
+      <h2>[##_title_##]</h2>
+    </div>
+
+
   <!-- 제목 바-->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <div class="container clearfix">
 
 
-      <a class="navbar-brand" href="/">
-        <img src="[##_image_##]" width="30" height="30" class="d-inline-block align-top"> [##_title_##]</a>
+      <!--<a class="navbar-brand" href="/">
+        <img src="[##_image_##]" width="30" height="30" class="d-inline-block align-top"> [##_title_##]</a>-->
 
       <!-- collapse 토글 바 -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -64,7 +68,7 @@
             <a class="nav-link" href="[##_blog_link_##]">홈</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./notice">공지사항</a>
+            <a class="nav-link" href="[##_blog_link_##]/notice">공지사항</a>
           </li>
 
           <li class="nav-item">
