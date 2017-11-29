@@ -1,6 +1,6 @@
 # tistory-essence-skin
 
-> Essence: Simple and structured Tistory blog skin
+> 깔끔한 Bootstrap 4 기반 반응형 티스토리 스킨
 
 ## 소개
 [Bootstrap 4](https://getbootstrap.com)를 기반으로 한 간결하고 미려한 반응형 티스토리 스킨입니다. 직접 운영할 블로그에 적용하기 위해 만들어졌기 때문에 글 읽기와 카테고리 기능 외로는 대부분 제거하였습니다. 댓글은 [Facebook Comment Plugin](https://developers.facebook.com/docs/plugins/comments/)을 사용합니다.
